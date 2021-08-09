@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         val Bookkeeping_Fragment=com.example.myapplication.Bookkeeping_Fragment()
         val Search_Fragment=com.example.myapplication.Search_Fragment()
         val Calculator_Fragment=com.example.myapplication.Calculator_Fragment()
+        val Coin_Fragment=com.example.myapplication.Coin_Fragment()
     }
     private var nevgationview: BottomNavigationView? =null
 
@@ -20,9 +21,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.container_activity_main, Bookkeeping_Fragment)
-            .commit()
+        supportFragmentManager.beginTransaction().replace(R.id.container_activity_main, Bookkeeping_Fragment).commit()
         nevgationview=findViewById(R.id.nevgationview)
         nevgationview?.selectedItemId = R.id.f1
         nevgationview?.setOnItemSelectedListener {
@@ -32,6 +31,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.f2->supportFragmentManager.beginTransaction().replace(R.id.container_activity_main, Search_Fragment).commit()
                 R.id.f3->supportFragmentManager.beginTransaction().replace(R.id.container_activity_main, Dice_Fragment).commit()
                 R.id.f4->supportFragmentManager.beginTransaction().replace(R.id.container_activity_main, Calculator_Fragment).commit()
+                R.id.f5->supportFragmentManager.beginTransaction().replace(R.id.container_activity_main, Coin_Fragment).commit()
             }
             return@setOnItemSelectedListener true
         }

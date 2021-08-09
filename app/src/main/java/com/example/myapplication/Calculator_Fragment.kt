@@ -59,6 +59,46 @@ class Calculator_Fragment : Fragment() {
         val view=inflater.inflate(R.layout.fragment_calculator, container, false)
         set_obj(view)
         init()
+        btn_press()
+        text_press()
+        return view
+    }
+
+    private fun init() {
+        text_player1?.isSelected=true
+        text_player2?.isSelected=false
+        if(isRunning)
+        {
+            btn_start?.setImageResource(R.drawable.ic_pause_black_24dp)
+            text_time?.text = format_time(time)
+        }
+        else
+        {
+            btn_start?.setImageResource(R.drawable.ic_play_arrow_black_24dp)
+            text_time?.text = format_time(time)
+        }
+        text_player1?.text=player1_lp.toString()
+        text_player2?.text=player2_lp.toString()
+    }
+
+    private fun text_press()
+    {
+        text_player1?.setOnClickListener {
+            player="player1"
+            text_player1?.isSelected=true
+            text_player2?.isSelected=false
+        }
+        text_player2?.setOnClickListener {
+            player="player2"
+            text_player1?.isSelected=false
+            text_player2?.isSelected=true
+        }
+    }
+
+
+
+    private fun btn_press()
+    {
         btn_plus?.setOnClickListener {
             show_dialog("+")
         }
@@ -70,16 +110,6 @@ class Calculator_Fragment : Fragment() {
         }
         btn_div?.setOnClickListener {
             show_dialog("/")
-        }
-        text_player1?.setOnClickListener {
-            player="player1"
-            text_player1?.isSelected=true
-            text_player2?.isSelected=false
-        }
-        text_player2?.setOnClickListener {
-            player="player2"
-            text_player1?.isSelected=false
-            text_player2?.isSelected=true
         }
         btn_start?.setOnClickListener {
             isRunning=!isRunning
@@ -96,26 +126,6 @@ class Calculator_Fragment : Fragment() {
             player2_lp=8000
             init()
         }
-        return view
-    }
-
-    private fun init() {
-        text_player1?.isSelected=true
-        text_player2?.isSelected=false
-        if(isRunning)
-        {
-            btn_start?.setImageResource(R.drawable.ic_pause_black_24dp)
-            val sec = time % 60
-            val min = time / 60
-            text_time?.text = format_time(time)
-        }
-        else
-        {
-            btn_start?.setImageResource(R.drawable.ic_play_arrow_black_24dp)
-            text_time?.text = format_time(time)
-        }
-        text_player1?.text=player1_lp.toString()
-        text_player2?.text=player2_lp.toString()
     }
 
     private fun format_time(time:Int): String {
@@ -365,8 +375,6 @@ class Calculator_Fragment : Fragment() {
         timerTask = timer(period=1000)
         {
             time--
-            val sec = time % 60
-            val min = time / 60
             activity?.runOnUiThread {
                 text_time?.text = format_time(time)
             }

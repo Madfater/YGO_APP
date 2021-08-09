@@ -12,21 +12,34 @@ import kotlin.random.Random
 class Dice_Fragment : Fragment() {
 
 
+    private var now_pic:ImageView?=null
+    private var last_pic:ImageView?=null
+    var pic_id = R.drawable.ic_dice_one
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
     {
         val view =inflater.inflate(R.layout.fragment_dice, container, false)
-        val now_pic=view.findViewById<ImageView>(R.id.Dice_pic)
-        val last_pic=view.findViewById<ImageView>(R.id.last_dice_pic)
-        var pic_id = R.drawable.ic_dice_one
-        last_pic.setImageResource(0)
-        now_pic.setOnClickListener {
-            last_pic.setImageResource(pic_id)
-            pic_id=rolling()
-            now_pic.setImageResource(pic_id)
-        }
+        set_obj(view)
+        dice_press()
         return view
     }
+
+    private fun set_obj(view: View)
+    {
+        now_pic=view.findViewById<ImageView>(R.id.Dice_pic)
+        last_pic=view.findViewById<ImageView>(R.id.last_dice_pic)
+        last_pic?.setImageResource(0)
+    }
+
+    private fun dice_press()
+    {
+        now_pic?.setOnClickListener {
+            last_pic?.setImageResource(pic_id)
+            pic_id=rolling()
+            now_pic?.setImageResource(pic_id)
+        }
+    }
+
     private fun rolling(): Int {
         return when(Random.nextInt(1,6))
         {

@@ -16,4 +16,8 @@
         android:id="@+id/f4"
         android:title="傷害計算器"
         android:icon="@drawable/ic_negativebutton_calculator"/>
+    <item
+        android:id="@+id/f5"
+        android:title="硬幣"
+        android:icon="@drawable/ic_toss_coin"/>
 </menu>
