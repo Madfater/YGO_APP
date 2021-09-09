@@ -15,7 +15,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nevgationview"
+        android:id="@+id/nevgationview_main"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="@color/negativeButton_Background"

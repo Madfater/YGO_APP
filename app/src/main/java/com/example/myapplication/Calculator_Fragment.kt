@@ -1,10 +1,7 @@
 package com.example.myapplication
 
-import android.annotation.SuppressLint
 import android.app.Dialog
-import android.media.Image
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,11 +9,9 @@ import android.view.Window
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import java.util.*
 import kotlin.concurrent.timer
-import kotlin.math.log
 
 class Calculator_Fragment : Fragment() {
 
@@ -64,7 +59,8 @@ class Calculator_Fragment : Fragment() {
         return view
     }
 
-    private fun init() {
+    private fun init()
+    {
         text_player1?.isSelected=true
         text_player2?.isSelected=false
         if(isRunning)
@@ -83,7 +79,7 @@ class Calculator_Fragment : Fragment() {
 
     private fun text_press()
     {
-        text_player1?.setOnClickListener {
+        text_player1?.setOnClickListener{
             player="player1"
             text_player1?.isSelected=true
             text_player2?.isSelected=false
@@ -94,7 +90,6 @@ class Calculator_Fragment : Fragment() {
             text_player2?.isSelected=true
         }
     }
-
 
 
     private fun btn_press()
@@ -129,10 +124,10 @@ class Calculator_Fragment : Fragment() {
     }
 
     private fun format_time(time:Int): String {
-        var min=time/60
-        var sec=time%60
-        var min_format=if(min>=10) "$min" else "0$min"
-        var sec_format=if(sec>=10) "$sec" else "0$sec"
+        val min=time/60
+        val sec=time%60
+        val min_format=if(min>=10) "$min" else "0$min"
+        val sec_format=if(sec>=10) "$sec" else "0$sec"
         return "$min_format:$sec_format"
     }
 

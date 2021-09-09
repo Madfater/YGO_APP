@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".Search_Fragment">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="126dp"
-        android:text="TextView" />
-</FrameLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_height="55dp"
+        android:layout_width="match_parent"
+        android:id="@+id/nevgationview_main_card"
+        android:background="@color/negativeButton_Background"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/sl_tab_color"
+        app:itemTextColor="@color/sl_tab_color"
+        app:menu="@menu/menu_navigationbar_card"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_activity_card"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

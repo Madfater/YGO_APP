@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_weight="9"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:textSize="30sp"
+                android:text="卡名"
+                android:id="@+id/Text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_marginLeft="10dp"
+                android:singleLine="true"
+                android:id="@+id/editText_name"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:textSize="30dp"
+                android:text="種類"
+                android:id="@+id/Text_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:entries="@array/type"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/type_spinner"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_back" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:text="等級"
+                android:textSize="30dp"
+                android:id="@+id/Text_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"  />
+
+            <EditText
+                android:layout_marginLeft="10dp"
+                android:singleLine="true"
+                android:inputType="number"
+                android:id="@+id/editText_level"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:text="屬性"
+                android:textSize="30dp"
+                android:id="@+id/Text_attribute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"  />
+
+            <Spinner
+                android:entries="@array/attribute"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/attribute_spinner"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_back" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:text="種族"
+                android:textSize="30dp"
+                android:id="@+id/Text_race"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:entries="@array/race"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/race_spinner"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spinner_back" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:text="攻擊力"
+                android:textSize="30dp"
+                android:id="@+id/Text_atk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"  />
+
+            <EditText
+                android:layout_marginLeft="10dp"
+                android:singleLine="true"
+                android:inputType="number"
+                android:id="@+id/editText_atk"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:text="防禦力"
+                android:textSize="30dp"
+                android:id="@+id/Text_def"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_marginLeft="10dp"
+                android:id="@+id/editText_def"
+                android:singleLine="true"
+                android:inputType="number"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="0dp">
+        <Button
+            android:autoSizeTextType="uniform"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rec_button"
+            android:textColor="@color/white"
+            android:text="搜尋"
+            android:textSize="36sp"
+            android:id="@+id/btn_search_attribute"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+        </Button>
+        <Button
+            android:autoSizeTextType="uniform"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rec_button"
+            android:textColor="@color/white"
+            android:text="清空"
+            android:textSize="36sp"
+            android:id="@+id/btn_clear_attribute"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+        </Button>
+    </LinearLayout>
+</LinearLayout>

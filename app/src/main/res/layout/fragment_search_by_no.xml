@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_weight="9"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:text="卡號"
+            android:textSize="30dp"
+            android:id="@+id/Text_No"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:layout_marginLeft="10dp"
+            android:singleLine="true"
+            android:inputType="text"
+            android:id="@+id/editText_No"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="0dp">
+        <Button
+            android:autoSizeTextType="uniform"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rec_button"
+            android:textColor="@color/white"
+            android:text="搜尋"
+            android:textSize="36sp"
+            android:id="@+id/btn_search_No"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+        </Button>
+        <Button
+            android:autoSizeTextType="uniform"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rec_button"
+            android:textColor="@color/white"
+            android:text="清空"
+            android:textSize="36sp"
+            android:id="@+id/btn_clear_No"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+        </Button>
+    </LinearLayout>
+</LinearLayout>

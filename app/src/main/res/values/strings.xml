@@ -1,8 +1,77 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
 
     <string name="app_name">遊戲王APP</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="type">
+        <item></item>
+        <item>通常怪獸</item>
+        <item>效果怪獸</item>
+        <item>反轉怪獸</item>
+        <item>卡通怪獸</item>
+        <item>靈魂怪獸</item>
+        <item>二重怪獸</item>
+        <item>極限怪獸</item>
+        <item>儀式怪獸</item>
+        <item>融合怪獸</item>
+        <item>同步怪獸</item>
+        <item>協調怪獸</item>
+        <item>超量怪獸</item>
+        <item>擺動怪獸</item>
+        <item>連結怪獸</item>
+        <item>通常魔法</item>
+        <item>場地魔法</item>
+        <item>速功魔法</item>
+        <item>儀式魔法</item>
+        <item>裝備魔法</item>
+        <item>永續魔法</item>
+        <item>通常陷阱</item>
+        <item>反制陷阱</item>
+        <item>反擊陷阱</item>
+    </string-array>
+    <string-array name="attribute">
+        <item></item>
+        <item>地</item>
+        <item>水</item>
+        <item>風</item>
+        <item>炎</item>
+        <item>光</item>
+        <item>闇</item>
+        <item>神</item>
+    </string-array>
+    <string-array name="race">
+        <item></item>
+        <item>惡魔族</item>
+        <item>不死族</item>
+        <item>海龍族</item>
+        <item>雷族</item>
+        <item>岩石族</item>
+        <item>機械族</item>
+        <item>恐龍族</item>
+        <item>獸族</item>
+        <item>昆虫族</item>
+        <item>魚族</item>
+        <item>植物族</item>
+        <item>獸戰士族</item>
+        <item>戰士族</item>
+        <item>鳥獸族</item>
+        <item>天使族</item>
+        <item>龍族</item>
+        <item>爬蟲類族</item>
+        <item>水族</item>
+        <item>炎族</item>
+        <item>魔法師族</item>
+        <item>超能族</item>
+        <item>幻龍族</item>
+        <item>電子界族</item>
+        <item>幻神獸族</item>
+    </string-array>
+    <string name="title_activity_search_result">SearchResultActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 
-
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

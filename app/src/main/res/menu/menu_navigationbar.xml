@@ -1,23 +1,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/f1"
-        android:title="記帳"
-        android:icon="@drawable/ic_negativebotton_bookking"/>
-    <item
-        android:id="@+id/f2"
+        android:id="@+id/f_card"
         android:title = "卡片查詢"
         android:icon="@drawable/ic_negativebutton_search_tool"/>
     <item
-        android:id="@+id/f3"
+        android:id="@+id/f_dice"
         android:title="骰子"
         android:icon="@drawable/ic_negativebutton_dice"/>
     <item
-        android:id="@+id/f4"
+        android:id="@+id/f_calculator"
         android:title="傷害計算器"
         android:icon="@drawable/ic_negativebutton_calculator"/>
     <item
-        android:id="@+id/f5"
+        android:id="@+id/f_coin"
         android:title="硬幣"
         android:icon="@drawable/ic_toss_coin"/>
 </menu>

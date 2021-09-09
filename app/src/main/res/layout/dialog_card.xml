@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:autoSizeTextType="uniform"
+        android:id="@+id/text_name_card_dialog"
+        android:layout_margin="10dp"
+        android:layout_weight="0.5"
+        android:text="青眼白龍"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="0dp">
+    </TextView>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_weight="6"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <ImageView
+            android:id="@+id/image_card_dialog"
+            android:src="@drawable/ic_test_card"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:layout_width="400dp"
+            android:layout_height="350dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:layout_weight="2"
+            android:autoSizeTextType="uniform"
+            android:text="獸戰士族"
+            android:id="@+id/text_race_card_dialog"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:gravity="center"
+            android:layout_weight="0.3"
+            android:text="/"
+            android:autoSizeTextType="uniform"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:layout_weight="2"
+            android:text="效果怪獸"
+            android:autoSizeTextType="uniform"
+            android:id="@+id/text_type_card_dialog"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+        <TextView
+            android:singleLine="false"
+            android:scrollbars = "vertical"
+            android:autoSizeTextType="uniform"
+            android:gravity="left"
+            android:layout_weight="8"
+            android:text="此卡不能通常召喚。移除我方牌組1體「青眼白龍」當作條件來從手札特殊召喚此卡。「Sin」之名怪獸只能表側表示存在場上1體。此卡表側表示存在場上為限，我方場上的其它怪獸不能攻擊宣言，場上不存在表側表示的場地魔法卡時此卡破壞。"
+            android:id="@+id/text_content_card_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="0dp">
+
+        <Button
+            android:autoSizeTextType="uniform"
+            android:layout_margin="10dp"
+            android:background="@drawable/rec_button"
+            android:textColor="@color/white"
+            android:text="返回"
+            android:textSize="36sp"
+            android:id="@+id/btn_back_card_dialog"
+            android:layout_gravity="center"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content">
+        </Button>
+
+    </LinearLayout>
+
+</LinearLayout>
