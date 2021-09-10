@@ -1,16 +1,17 @@
 package com.example.myapplication
 
-import android.app.Activity
 import android.app.Dialog
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
-import android.util.Log
 import android.view.Window
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
+import org.greenrobot.eventbus.EventBus
+import org.greenrobot.eventbus.Subscribe
+import org.greenrobot.eventbus.ThreadMode
 
 
 class SearchResultActivity : AppCompatActivity() {
@@ -30,7 +31,7 @@ class SearchResultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_search_result)
 
 
-        val cards:ArrayList<CardData> = intent.extras?.getParcelableArrayList<CardData>("Cards") as ArrayList<CardData>
+        val cards:ArrayList<CardData> = DataTransfer().getData()
         btn_finish=findViewById(R.id.btn_Cardlist_finish)
 
 
@@ -54,6 +55,7 @@ class SearchResultActivity : AppCompatActivity() {
             }
         })
     }
+
 
     private fun show_dialog(Card:CardData)
     {

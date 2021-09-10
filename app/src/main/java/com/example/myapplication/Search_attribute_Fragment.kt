@@ -15,6 +15,7 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import okhttp3.*
+import org.greenrobot.eventbus.EventBus
 import org.json.JSONArray
 import java.io.IOException
 
@@ -67,6 +68,7 @@ class Search_attribute_Fragment:Fragment() {
 
         return view
     }
+
 
     override fun onPause() {
         super.onPause()
@@ -140,11 +142,8 @@ class Search_attribute_Fragment:Fragment() {
                     {
                         format_CardData(data)
 
-                        val bundle = Bundle()
-                        bundle.putParcelableArrayList("Cards", Cards)
-
                         val intent = Intent(activity,SearchResultActivity::class.java)
-                            .apply{putExtras(bundle)}
+                        DataTransfer().setData(Cards)
 
                         activity?.startActivity(intent)
                     }
